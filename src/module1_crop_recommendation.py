@@ -130,6 +130,7 @@ def train_random_forest(X_train, X_val, X_test, y_train, y_val, y_test, y, prepr
         "model__n_estimators": [100, 300],
         "model__max_depth": [None, 20, 40],
         "model__min_samples_split": [2, 5],
+        "model__class_weight": [None, "balanced"],
     }
 
     optimized_pipeline = Pipeline(
